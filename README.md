@@ -55,8 +55,9 @@ O comand **print** é responsável por imprimir informações no terminal, para 
 
 ### 4.3 - Usando o comando format
 <br> Esta forma de inserção do valor da variável, possui uma particularidade diferente das outras, porque ele possui uma ordenação a ser respeitada para funcionar corretamente. Por tanto ao utilizar o **FORMAT** para realizar o input da variável é importante levar em consideração a seguinte estutura.
-- print('Assunto 1 {}, assunto 2 {}, assunto 3{}
-- print('Eu me chamo {}, tenho {} anos. Moro em {})
+- print('Assunto 1 {}, assunto 2 {}, assunto 3{}'.format(variavel1,variavel2,variavel3))
+<br> - print('Eu me chamo {}, tenho {} anos. Moro em {}'.format(Lucas,20,Sp)
+<br> - print('Eu tenho um {}, um {} e um {]'.format(cachorro,gato,peixe))
 
 
 

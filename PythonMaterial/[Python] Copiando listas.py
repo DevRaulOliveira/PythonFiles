@@ -1,0 +1,2 @@
+nomes = ['Gabriel', 'Danny', 'Arthur']
+

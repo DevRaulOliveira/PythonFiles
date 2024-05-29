@@ -14,3 +14,10 @@ print('Acessando o ultimo item da tupla [-1]\n', tupla[-1])
 # Caso queira acessar a partir do primeiro fica dessa forma [0:]
 print('Acessando um intervalo de itens de uma tupla [:] \n', tupla[0:2])
 
+# Verificando se existe uma determinada informação na Tupla
+print('Existe o nome Danny na Tupla?\n', 'Danny' in tupla) # Existe a palavra Danny na tupla ? A resposta que o print irá retornar será True, por que sim, existe 'Danny' na tupla
+
+# A verificação pode ser feita utilizando o comando IF
+if 'Danny' in tupla:
+    print('Sim, este nome está na tupla')
+

@@ -14,7 +14,7 @@ root.title('Introdução aos Widgets temáticos TTK')
 
 # Config de Tela
 root.resizable(1,1)
-root.state('zoomed')
+root.state('normal')
 
 screen_x = root.winfo_screenwidth()
 screen_y = root.winfo_screenheight()

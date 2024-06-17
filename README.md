@@ -71,3 +71,11 @@ O comand **print** é responsável por imprimir informações no terminal, para 
 - print('Assunto 1 {}, assunto 2 {}, assunto 3{}'.format(variavel1,variavel2,variavel3))
 <br> - print('Eu me chamo {}, tenho {} anos. Moro em {}'.format(Lucas,20,Sp)
 <br> - print('Eu tenho um {}, um {} e um {]'.format(cachorro,gato,peixe))
+
+# Aplicações em Python
+
+## 1 - Importação do módulo Tkinter
+## 2 - Importação do módulo temático TTK
+## 3 - Configuraçoes básicas da janela da aplicação
+## 4 - Construtor de widgets em aplicações
+

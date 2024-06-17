@@ -61,13 +61,13 @@ O comand **print** é responsável por imprimir informações no terminal, para 
 <br> - Exemplo 2: print('Eu tenho', idade ,'anos'.)
 
 ### 5.2 - Usando {}
-<br> Esta forma de inserir o valor da variável utilizando o simbolo de **{}** durante a utilização do comando **PRINT**, possui a seguinte estrutura. <br> 
+Esta forma de inserir o valor da variável utilizando o simbolo de **{}** durante a utilização do comando **PRINT**, possui a seguinte estrutura. <br> 
 - print('Mensagem impressa {nome da variável}')
 <br> - Exemplo 1: print('O meu nome é {nome}')
 <br> - Exemplo 2: print('Eu tenho {idade} anos')
 
 ### 5.3 - Usando o comando format
-<br> Esta forma de inserção do valor da variável, possui uma particularidade diferente das outras, porque ele possui uma ordenação a ser respeitada para funcionar corretamente. Por tanto ao utilizar o **FORMAT** para realizar o input da variável é importante levar em consideração a seguinte estutura.
+Esta forma de inserção do valor da variável, possui uma particularidade diferente das outras, porque ele possui uma ordenação a ser respeitada para funcionar corretamente. Por tanto ao utilizar o **FORMAT** para realizar o input da variável é importante levar em consideração a seguinte estutura.
 - print('Assunto 1 {}, assunto 2 {}, assunto 3{}'.format(variavel1,variavel2,variavel3))
 <br> - print('Eu me chamo {}, tenho {} anos. Moro em {}'.format(Lucas,20,Sp)
 <br> - print('Eu tenho um {}, um {} e um {]'.format(cachorro,gato,peixe))
@@ -144,7 +144,7 @@ Além das configurações de tela de aplicação, é possível também configura
 - Estado ao iniciar a aplicação com o metodo **state**.
 <br> Ao inciarmos uma aplicação em Python é possível definir o comportamento da janela da aplicação. As opções estarão listadas a seguir após a apresentação do metodo.
 #### 4.6.1. Modelo de utilização do metodo State:
-<br> - NomeDaPaginaMainDaAplicação.state('Comportamento da tela ao iniciar')
+- NomeDaPaginaMainDaAplicação.state('Comportamento da tela ao iniciar')
 <br>  - Exemplo: root.state('normal')
 >[!NOTE]
 > Desta forma ao inciar a aplicação a mesma manterá as informações de dimensionamento configuradas por padrão.

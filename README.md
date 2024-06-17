@@ -74,8 +74,11 @@ O comand **print** é responsável por imprimir informações no terminal, para 
 
 # Aplicações em Python
 
-O Python assim, como diversas linguagens de proigramção possui uma série de módulos que atuam em diferentes áreas. O módulo utilizado para a geração de aplicações é o módulo Tkinter, por isso ao realizar a criação de uma aplicação em Python será necessário realizar a sua importação.
-## 1 - Importação do módulo Tkinter
+O Python assim, como diversas linguagens de programção possui uma série de módulos que atuam em diferentes áreas. O módulo utilizado para a geração de aplicações é o módulo Tkinter, por isso ao realizar a criação de uma aplicação em Python será necessário realizar a sua importação.
+## 1 - Formato do arquivo Python, diferenças entre **.py** e **.pyw**
+Quando abordamos o tema apicações em Python é preciso ter atenção incialmente que existem dois tipos de extensões de arquivos Python, sendo elas .py e .pyw. A principal diferença entre ambas é que a .py **é voltada a execução do código junto a IDE(VS Code) entre outras, ou seja, demonstra o código desenvolvido e é voltada na maioria dos casos ao processo de desenvovimento e manutenção. Porém ao falarmos de aplicações em Python, existe uma opção de extensão chamada .pyw, no qual basicamente é executada a aplicação desenvolvida em linguagem Python, com isso não abrindo a IDE e nem exibindo o código utilizada para desenvolvimento, sendo voltada ao ponto de utilização do usuário.
+
+## 2 - Importação do módulo Tkinter
 - Modelo de importação do módulo Tkinter:
 <br> import Tkinter
 >[!NOTE]
@@ -84,7 +87,7 @@ O Python assim, como diversas linguagens de proigramção possui uma série de m
 
 - Modelo de atribuição de Nickname/Alias ao módulo Tkinter:
 <br> import tkinter as tk
-## 2 - Importação do módulo temático TTK
+## 3 - Importação do módulo temático TTK
 O módulo Tkinter da atual versão do Python(versão 3.12.3), conta com dois modelos temáticos. O primeiro sendo o TK e o segundo o TTK(mais recente).
 - Modelo temático TK: Modelo temático antigo do Python criado em 1994, possuindo um visual mais baseado em temas com visual retro.
 - Modelo temático TTK: Modelo temático com aspectos visuais um pouco mais atualizado, tendo a sua criação em 2007.
@@ -94,16 +97,16 @@ O módulo Tkinter da atual versão do Python(versão 3.12.3), conta com dois mod
 <br> import tkinter
 <br>  from tkinter import ttk
  
-## 3 - Configuraçoes básicas da janela da aplicação
+## 4 - Configuraçoes básicas da janela da aplicação
 Toda janela de aplicação Python, pode ser configurada em relação a sua altura, estado inicial, permissões, ordenação e icones. Todas essas informações estarão contidas nesse bloco, dividindo em passo a passo de cada etapa.
-### 3.1. Definindo as dimensões de uma janela de aplicação.
+### 4.1. Definindo as dimensões de uma janela de aplicação.
 Toda a janela de aplicação tem dois parametros para definir a sua medida, sendo elas a largura(width) e altura(height). Por padrão as medidas são em Pixels, podendo ser criada da seguinte forma:
  - Largura da janela da aplicação: 
 <br> - wind_width = MedidaDesejadaLargura
  - Altura da janela da aplicação:
 <br> - wind_height = MedidaDesejadaAltura
 
-### 3.2. Definindo as dimensões da tela.
+### 4.2. Definindo as dimensões da tela.
 Para que ocorra o dimensionamento adequado da resolução de uma tela, basta utilizar os metodos do Tkinter **winfo_screenwdith()** e **winfo_screenheight()**. Esses metodos retornam as dimensões de tela do computador, garantindo a normalização do funcionamento das aplicações em diversas resoluções de tela.
 > [!NOTE]
 > Para utilizações futuras, irei realizar a atribuição das proporções de tela encontrados a variáveis por que apenas dessa forma se torna possível a sua utilização adequada na configuração da janela da aplicação Python
@@ -114,7 +117,7 @@ Para que ocorra o dimensionamento adequado da resolução de uma tela, basta uti
 <br> - screen_y= NomeDaPaginaMainDaAplicação.winfo_screenheight()
 <br>  - Exemplo: screen_y = root.winfo_screenheight()
 
-### 3.3. Definindo o centro da aplicaçãonos eixos x e y
+### 4.3. Definindo o centro da aplicaçãonos eixos x e y
 Para a definição adequada e obtenção de valores manipuláeis é necessário que ocorra a conversão dos valores obtidos para o formato **INT** e que esses valores sejam atriuidos a variáveis. Por isso o calculo aplicado para a largura e altura será a **resolução da tela divido por 2 - as dimensões da aplicação divida por 2**. Com isso obtemos a seguinte expressão.
 - Centralizando a aplicação na horizontal.
 <br> - center_x = int(LarguraDaTela/2 - LarguraDaAplicação/2)
@@ -124,36 +127,35 @@ Para a definição adequada e obtenção de valores manipuláeis é necessário 
 <br> - center_y = int(AlturaDaTela/2 - AlturaDaAplicação/2)
 <br>  - Exemplo: center_y = int(screen_y/2 - wind_height/2)
 
-### 3.4. Geometria final da aplicação
+### 4.4. Geometria final da aplicação
 Após a obtenção de todas as informações de posicionamento e medidas da aplicação e tela, podemos utilizar o metodo **geometry** para que de fato sejam aplicadas as informações calculadas.
 - Modelo de uso do metodo **geometry**:
 <br> - NomeDaPaginaMainDaAplicação.geometry = f'{LarguraDaJanelaDaAplicação}x{AlturaDaJanelaDaAplicação}+{PosiçãoCentralNoEixoHorizontal}+{PosicaoCentralNoEixoVertical}'
 <br>  - Exemplo: root.geometry = f'{wind_width}x{wind_height}+{center_x}+{center_y}'
 
-### 3.5. Atribuição um Icone a aplicação
+### 4.5. Atribuição um Icone a aplicação
 Para realizar a atribuição de um icone a uma aplicação é necessário a utilização do metodo **iconbitmap**. Lembrando que a imagem a ser utilizada precisa obrigatóriamente estar nessa formatação **.ICO**
 - Modelo de utilização do metodo **iconbitmap**
 <br> - NomeDaPaginaMainDaAplicação.iconbitmap(Caminho do arquivo)
 <br>  - Exemplo: root.iconbitmap('C:\\Users\\...)
 
-### 3.6. Configurações ao inicializar a aplicação e restrições.
+### 4.6. Configurações ao inicializar a aplicação e restrições.
 Além das configurações de tela de aplicação, é possível também configurar o comportamento da aplicação tanto ao incializar, quanto durante o seu funcionamento, sendo possível até mesmo ordenar telas de acordo com o objetivo do projeto.
 - Estado ao iniciar a aplicação com o metodo **state**.
 <br> Ao inciarmos uma aplicação em Python é possível definir o comportamento da janela da aplicação. As opções estarão listadas a seguir após a apresentação do metodo.
-- Modelo de utilização do metodo State:
+#### 4.6.1. Modelo de utilização do metodo State:
 <br> - NomeDaPaginaMainDaAplicação.state('Comportamento da tela ao iniciar')
 <br>  - Exemplo: root.state('normal')
 >[!NOTE]
->Desta forma ao inciar a aplicação a mesma manterá as informações de dimensionamento configuradas por padrão.
-- Modelo de utilização do metodo **state** + **zoomed*
-<br> Neste modelo a aplicação ao iniciar irá se ajustar a tela cheia automaticamente.
-<br> - NomeDaPaginaMainDaAplicacção.state('zoomed')
-<br>  - Exemplo: root.state('zoomed')
+> Desta forma ao inciar a aplicação a mesma manterá as informações de dimensionamento configuradas por padrão.
+> O mesmo se aplica as outras variações. Sendo elas 'zoomed' = tela cheia, 'iconic' = minimizada e 'normal' = medida padrão
 
-- Modelo de utilização
-
-  
-
+#### 4.6.2. Modelo de utilização do metodo Resizeble:
+Este metodo permite o redimensionamento da janela da aplicação, sendo baseado em valores booleanos ou seja **True** ou **False** ou numericamente(1,0). Desta forma é possível restringir o redimensionamento da janela da aplicação, lembrando que por padrão essa é uma opção que já vem disponibilizada, permitindo o redimensionamento.
+- Modelo de uso do meotodo **resizeble**:
+<br> - NomeDaPaginaMainDaAplicação.resizeble(True,true) -> Desta forma está habilitada a edição das dimensões da janela da aplicação.
+<br>  - Exemplo: root.resizeble(0,0) -> Desta forma está bloqueada o redimensionamento da janela da aplicação.
    
-## 4 - Construtor de widgets em aplicações
+## 5 - Construtor de widgets em aplicações
+
 

@@ -42,7 +42,7 @@ Existem uma série de códigos que permitem a alteração de cores das letras no
 
 ### 3.2 Link de acessoa lista de cores em Python
 Link de acesso a lista de cores disponíveis para personalização do terminal utilizando a linguagem Python.
-<br>  https://wiki.python.org.br/CoresNoTerminal
+<br>  [Cores no terminal Python](https://wiki.python.org.br/CoresNoTerminal)
 
 ## 4 - Comando INPUT
 
@@ -74,8 +74,20 @@ O comand **print** é responsável por imprimir informações no terminal, para 
 
 # Aplicações em Python
 
+O Python assim, como diversas linguagens de proigramção possui uma série de módulos que atuam em diferentes áreas. O módulo utilizado para a geração de aplicações é o módulo Tkinter, por isso ao realizar a criação de uma aplicação em Python será necessário realizar a sua importação.
 ## 1 - Importação do módulo Tkinter
+- Modelo de importação do módulo Tkinter:
+<br> import Tkinter
+>[!NOTE]
+>Normalmente ao realizar a importação de um módulo é realizada a adição de um "nickname" para se referir a esse módulo, essa pratica facilita bastante o processo de desenvolvimento, tornando-o mais ágil.
+>Ao utilizarmos o Tkinter, normalmente adicionamos o nickname tk.
+
+- Modelo de atribuição de Nickname/Alias ao módulo Tkinter:
+<br> import tkinter as tk
 ## 2 - Importação do módulo temático TTK
+O módulo Tkinter da atual versão do Python(versão 3.12.3), conta com dois modelos temáticos. O primeiro sendo o TK e o segundo o TTK(mais recente).
+- Modelo temático TK: Modelo temático antigo do Python criado em 1994, possuindo um visual mais baseado em temas com visual retro.
+- Modelo temático TTK: Modelo temático com aspectos visuais um pouco mais atualizado, tendo a sua criação em 2007.
 ## 3 - Configuraçoes básicas da janela da aplicação
 ## 4 - Construtor de widgets em aplicações
 

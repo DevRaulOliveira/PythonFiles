@@ -107,7 +107,6 @@ Toda a janela de aplicação tem dois parametros para definir a sua medida, send
 Para que ocorra o dimensionamento adequado da resolução de uma tela, basta utilizar os metodos do Tkinter **winfo_screenwdith()** e **winfo_screenheight()**. Esses metodos retornam as dimensões de tela do computador, garantindo a normalização do funcionamento das aplicações em diversas resoluções de tela.
 > [!NOTE]
 > Para utilizações futuras, irei realizar a atribuição das proporções de tela encontrados a variáveis por que apenas dessa forma se torna possível a sua utilização adequada na configuração da janela da aplicação Python
-
 - Largura de resolução de tela:
 <br> - screen_x = NomeDaPaginaMainDaAplicação.winfo_screenwidth()
 <br>  - Exemplo: screen_x = root.winfo_screenwidth()
@@ -136,6 +135,23 @@ Para realizar a atribuição de um icone a uma aplicação é necessário a util
 - Modelo de utilização do metodo **iconbitmap**
 <br> - NomeDaPaginaMainDaAplicação.iconbitmap(Caminho do arquivo)
 <br>  - Exemplo: root.iconbitmap('C:\\Users\\...)
+
+### 3.6. Configurações ao inicializar a aplicação e restrições.
+Além das configurações de tela de aplicação, é possível também configurar o comportamento da aplicação tanto ao incializar, quanto durante o seu funcionamento, sendo possível até mesmo ordenar telas de acordo com o objetivo do projeto.
+- Estado ao iniciar a aplicação com o metodo **state**.
+<br> Ao inciarmos uma aplicação em Python é possível definir o comportamento da janela da aplicação. As opções estarão listadas a seguir após a apresentação do metodo.
+- Modelo de utilização do metodo State:
+<br> - NomeDaPaginaMainDaAplicação.state('Comportamento da tela ao iniciar')
+<br>  - Exemplo: root.state('normal')
+>[!NOTE]
+>Desta forma ao inciar a aplicação a mesma manterá as informações de dimensionamento configuradas por padrão.
+- Modelo de utilização do metodo **state** + **zoomed*
+<br> Neste modelo a aplicação ao iniciar irá se ajustar a tela cheia automaticamente.
+<br> - NomeDaPaginaMainDaAplicacção.state('zoomed')
+<br>  - Exemplo: root.state('zoomed')
+
+- Modelo de utilização
+
   
 
    

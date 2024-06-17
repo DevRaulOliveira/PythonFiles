@@ -88,6 +88,56 @@ O Python assim, como diversas linguagens de proigramção possui uma série de m
 O módulo Tkinter da atual versão do Python(versão 3.12.3), conta com dois modelos temáticos. O primeiro sendo o TK e o segundo o TTK(mais recente).
 - Modelo temático TK: Modelo temático antigo do Python criado em 1994, possuindo um visual mais baseado em temas com visual retro.
 - Modelo temático TTK: Modelo temático com aspectos visuais um pouco mais atualizado, tendo a sua criação em 2007.
+
+<br> Para a utilização do modelo temático **TTK** de 2007 é preciso realizar a sua importação. Esse processo pode ser feito da seguinte forma:
+- Modelo de importação do modelo temático TTK:
+<br> import tkinter
+<br>  from tkinter import ttk
+ 
 ## 3 - Configuraçoes básicas da janela da aplicação
+Toda janela de aplicação Python, pode ser configurada em relação a sua altura, estado inicial, permissões, ordenação e icones. Todas essas informações estarão contidas nesse bloco, dividindo em passo a passo de cada etapa.
+### 3.1. Definindo as dimensões de uma janela de aplicação.
+Toda a janela de aplicação tem dois parametros para definir a sua medida, sendo elas a largura(width) e altura(height). Por padrão as medidas são em Pixels, podendo ser criada da seguinte forma:
+ - Largura da janela da aplicação: 
+<br> - wind_width = MedidaDesejadaLargura
+ - Altura da janela da aplicação:
+<br> - wind_height = MedidaDesejadaAltura
+
+### 3.2. Definindo as dimensões da tela.
+Para que ocorra o dimensionamento adequado da resolução de uma tela, basta utilizar os metodos do Tkinter **winfo_screenwdith()** e **winfo_screenheight()**. Esses metodos retornam as dimensões de tela do computador, garantindo a normalização do funcionamento das aplicações em diversas resoluções de tela.
+> [!NOTE]
+> Para utilizações futuras, irei realizar a atribuição das proporções de tela encontrados a variáveis por que apenas dessa forma se torna possível a sua utilização adequada na configuração da janela da aplicação Python
+
+- Largura de resolução de tela:
+<br> - screen_x = NomeDaPaginaMainDaAplicação.winfo_screenwidth()
+<br>  - Exemplo: screen_x = root.winfo_screenwidth()
+- Altura da resolução da tela:
+<br> - screen_y= NomeDaPaginaMainDaAplicação.winfo_screenheight()
+<br>  - Exemplo: screen_y = root.winfo_screenheight()
+
+### 3.3. Definindo o centro da aplicaçãonos eixos x e y
+Para a definição adequada e obtenção de valores manipuláeis é necessário que ocorra a conversão dos valores obtidos para o formato **INT** e que esses valores sejam atriuidos a variáveis. Por isso o calculo aplicado para a largura e altura será a **resolução da tela divido por 2 - as dimensões da aplicação divida por 2**. Com isso obtemos a seguinte expressão.
+- Centralizando a aplicação na horizontal.
+<br> - center_x = int(LarguraDaTela/2 - LarguraDaAplicação/2)
+<br>  - Exemplo: center_x  = int(screen_x/2 - wind_width/2)
+
+- Centralizando a aplicação na vertical.
+<br> - center_y = int(AlturaDaTela/2 - AlturaDaAplicação/2)
+<br>  - Exemplo: center_y = int(screen_y/2 - wind_height/2)
+
+### 3.4. Geometria final da aplicação
+Após a obtenção de todas as informações de posicionamento e medidas da aplicação e tela, podemos utilizar o metodo **geometry** para que de fato sejam aplicadas as informações calculadas.
+- Modelo de uso do metodo **geometry**:
+<br> - NomeDaPaginaMainDaAplicação.geometry = f'{LarguraDaJanelaDaAplicação}x{AlturaDaJanelaDaAplicação}+{PosiçãoCentralNoEixoHorizontal}+{PosicaoCentralNoEixoVertical}'
+<br>  - Exemplo: root.geometry = f'{wind_width}x{wind_height}+{center_x}+{center_y}'
+
+### 3.5. Atribuição um Icone a aplicação
+Para realizar a atribuição de um icone a uma aplicação é necessário a utilização do metodo **iconbitmap**. Lembrando que a imagem a ser utilizada precisa obrigatóriamente estar nessa formatação **.ICO**
+- Modelo de utilização do metodo **iconbitmap**
+<br> - NomeDaPaginaMainDaAplicação.iconbitmap(Caminho do arquivo)
+<br>  - Exemplo: root.iconbitmap('C:\\Users\\...)
+  
+
+   
 ## 4 - Construtor de widgets em aplicações
 

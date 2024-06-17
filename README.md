@@ -169,6 +169,10 @@ Este metodo permite o redimensionamento da janela da aplicação, sendo baseado 
    
 ## 5 - Construtor de widgets em aplicações
 Widgets são componentes podem ser utilizados dentro de aplicações, alguns exemplos de **widget** disponíveis são botões, caixas de texto, checkbox, etc. Alguns widgets podem ser criados utilizando metodos diretos e possuem argumentos próprios. Esses widgets são atribuidos a variáveis para que depois possam ser exibidos na aplicação.
+<br> É importante citar que todo o construtor para ser exibido no código precisa da presença de um .pack() , esse comando garante o retorno do objeto contruido para a aplicação.
+- Modelo de utilização do **.pack**
+<br> - ObjetoConstruido.pack()
+<br>  - Exemplo: btn.pack() ; textbox.pack(); etc...
 
 ### 5.1. Modelo de Construtor de botões .Button
 <br> - btn = ttk.Button(NomeDaPaginaMainDaAplicação,text = 'Mensagem exibida no botão') -> lembrando que essa é a estrutura básica, mas podem ser utilizadas imagens e outros conteúdos também.

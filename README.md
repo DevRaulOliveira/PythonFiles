@@ -99,6 +99,17 @@ O módulo Tkinter da atual versão do Python(versão 3.12.3), conta com dois mod
  
 ## 4 - Configuraçoes básicas da janela da aplicação
 Toda janela de aplicação Python, pode ser configurada em relação a sua altura, estado inicial, permissões, ordenação e icones. Todas essas informações estarão contidas nesse bloco, dividindo em passo a passo de cada etapa.
+<br> Toda janela de aplicação em Python vai possuir a estrutura titulo e o loop de execução da aplicação, que fica posicionado no fim do código. Sendo elas as duas demonstradas abaixo:
+- Modelo de titulo de aplicação:
+<br> Este bloco possui o nome da pagina atual da aplicação, neste caso a página incial.
+<br> - NomeDaPaginaMainDaAplicação.title('Texto inserido como titulo')
+<br>  - Exemplo: root.title('Página Inicial')
+
+- Modelo de mainloop()
+<br> Este bloco possui o main loop, metodo utilizado para que a aplicação fique funcionando, sem a criação desse metodo a aplicação é executada e encerrada ao termino da execução automaticamente.
+<br> - NomeDaPaginaMainDaAplicação.mainloop()
+<br>  - Exemplo: root.mainloop()
+
 ### 4.1. Definindo as dimensões de uma janela de aplicação.
 Toda a janela de aplicação tem dois parametros para definir a sua medida, sendo elas a largura(width) e altura(height). Por padrão as medidas são em Pixels, podendo ser criada da seguinte forma:
  - Largura da janela da aplicação: 
@@ -157,5 +168,16 @@ Este metodo permite o redimensionamento da janela da aplicação, sendo baseado 
 <br>  - Exemplo: root.resizeble(0,0) -> Desta forma está bloqueada o redimensionamento da janela da aplicação.
    
 ## 5 - Construtor de widgets em aplicações
+Widgets são componentes podem ser utilizados dentro de aplicações, alguns exemplos de **widget** disponíveis são botões, caixas de texto, checkbox, etc. Alguns widgets podem ser criados utilizando metodos diretos e possuem argumentos próprios. Esses widgets são atribuidos a variáveis para que depois possam ser exibidos na aplicação.
 
+### 5.1. Modelo de Construtor de botões .Button
+<br> - btn = ttk.Button(NomeDaPaginaMainDaAplicação,text = 'Mensagem exibida no botão') -> lembrando que essa é a estrutura básica, mas podem ser utilizadas imagens e outros conteúdos também.
+<br>  - Exemplo: btn = ttk.Button(root,text = 'Pressione')
+ 
+### 5.2. Modelo de Construtor de caixa de texto .Entry
+<br> - textbox = ttk.Entry(NomeDaPaginaMainDaAplicação,text = 'Insira o texto aqui')
+<br>  - Exemplo: textbox = ttk.Entry(root,text = 'Insira o texto')
 
+### 5.3. Modelo de Construtor de checkbox .Checkbutton
+<br> - checkbox = ttk.Checkbutton(NomeDaPaginaMainDaAplicação,text='Mensagem exibida no checkbox')
+<br>   - Exemplo: checkbox = ttk.Checkbutton(root,text = 'Confirma a leitura das regras da comunidade')

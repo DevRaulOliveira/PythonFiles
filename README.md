@@ -1,6 +1,8 @@
 # Python
 ![Python](https://user-images.githubusercontent.com/49786548/84605451-b6d36200-ae73-11ea-94b3-9927d07f85fd.png)
 
+# Bibliotecas Python
+O site [Pypi](https://pypi.org/) contem uma lista de todas as bibliotecas Python disponíveis.
 # Lista de comandos em python com exemplos.
 
 ## 1 - Formatação de numeros.
@@ -185,3 +187,5 @@ Widgets são componentes podem ser utilizados dentro de aplicações, alguns exe
 ### 5.3. Modelo de Construtor de checkbox .Checkbutton
 <br> - checkbox = ttk.Checkbutton(NomeDaPaginaMainDaAplicação,text='Mensagem exibida no checkbox')
 <br>   - Exemplo: checkbox = ttk.Checkbutton(root,text = 'Confirma a leitura das regras da comunidade')
+
+

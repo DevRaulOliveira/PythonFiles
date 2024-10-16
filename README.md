@@ -2,7 +2,7 @@
 ![Python](https://user-images.githubusercontent.com/49786548/84605451-b6d36200-ae73-11ea-94b3-9927d07f85fd.png)
 
 # Bibliotecas Python
-O site [Pypi](https://pypi.org/) contem uma lista de todas as bibliotecas Python disponíveis.
+O site [Pypi Org](https://pypi.org/) contem uma lista de todas as bibliotecas Python disponíveis.
 # Lista de comandos em python com exemplos.
 
 ## 1 - Formatação de numeros.
